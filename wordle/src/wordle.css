@@ -1,4 +1,59 @@
 /*<!--task 1 , test the connection of css and js -->*/
-h1{
-    color: green;
+/*h1{*/
+/*    color: green;*/
+/*}*/
+
+/*<!--task 2 started -->*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
+
+.keyboard-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.keyboard {
+    /*display: inline-block;*/
+    border: 1px solid #000;
+    padding: 15px;
+    display: flex; /* USE flex  */
+    justify-content: space-between; /* let elements displaying at the  left and right side  */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #000;
+    background-color: #d4e0de;
+    cursor: pointer;
+}
+.rightSide {
+    display: flex;
+    flex-direction: column; /*set Flexbox columns vertically  */
+    padding: 11px;
+}
+.rightSide button {
+    margin-bottom: 10px; /* set the distance between boxes */
+    width: 100px;
+}
+
+
+
+/* Additional styles for responsiveness and aesthetics can be added here */
+
+/*<!--task 2 finished  -->*/
+
