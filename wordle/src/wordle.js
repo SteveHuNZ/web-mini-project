@@ -26,25 +26,32 @@ document.querySelector('#keyboard').addEventListener('click', function(event) {
 
             // Special handling for the Escape key
             if (event.key === 'Escape') {
-                console.log('New Game');
+                console.log('NewGame');
                 // Here, add the logic for starting a new game
             } else {
                 // Print the name of the key
-                console.log(event.key);
+                console.log(event.key.toUpperCase());
             }
         }
     });
 
-    //set 2-3 handle the click events and change the background color:
+    //set 2-3 handle the click events and change the background color for screen keyboard
 
     document.querySelectorAll('.clickBtn').forEach(key => {
+
         key.addEventListener('click', function() {
             this.classList.add('active');
             setTimeout(() => this.classList.remove('active'), 1000); // Removes the class after a short delay
         });
     });
-
-
+    //set 2-4 handle the click events and change the background color for mechanic keyboard
+    document.addEventListener('keyup', event => {
+        const key = event.key.toUpperCase();
+        const button = document.getElementById(`key${key}`);
+        if (button) {
+            button.style.backgroundColor = 'skyblue'; // Resets the background color
+        }
+    });
 
 
     <!--task 2 ended -->
