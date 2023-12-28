@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 <!--task 2 started -->
+    // 1, set screen keyboard  keypress event
 document.querySelector('#keyboard').addEventListener('click', function(event) {
     if (event.target.classList.contains('clickBtn')) {
         console.log(event.target.textContent);
     }
 });
 
-// set the computer keyboard event
+// 2set the computer keyboard event
     document.addEventListener('keydown', function(event) {
         // Check if the key is one of A-Z, Enter, Backspace, or Escape
         if ((event.key >= 'a' && event.key <= 'z') ||
@@ -33,6 +34,18 @@ document.querySelector('#keyboard').addEventListener('click', function(event) {
             }
         }
     });
+
+    //set 2-3 handle the click events and change the background color:
+
+    document.querySelectorAll('.clickBtn').forEach(key => {
+        key.addEventListener('click', function() {
+            this.classList.add('active');
+            setTimeout(() => this.classList.remove('active'), 1000); // Removes the class after a short delay
+        });
+    });
+
+
+
 
     <!--task 2 ended -->
 

@@ -50,7 +50,10 @@ button {
     margin-bottom: 10px; /* set the distance between boxes */
     width: 100px;
 }
-
+/* Style for when a key is active */
+.clickBtn.active {
+    background-color: skyblue; /* Change as needed */
+}
 
 
 /* Additional styles for responsiveness and aesthetics can be added here */
