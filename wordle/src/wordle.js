@@ -70,7 +70,19 @@ document.querySelector('#keyboard').addEventListener('click', function(event) {
 
 
     <!--task 4 'current guess' started -->
+// generate 30 squares
+    function createSquares(){
+        const gameBoard = document.getElementById("board")
 
+
+        for (let index =0;index<30; index++){
+            let square =document.createElement("div");
+            square.classList.add("square");
+            square.setAttribute("id",index + 1);
+            gameBoard.appendChild(square);
+
+        }
+    }
     <!--task 4 'current guess' ended -->
 
 
