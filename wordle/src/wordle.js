@@ -8,7 +8,17 @@ document.addEventListener("DOMContentLoaded", function() {
 //     alert('this is a successful demo')
 // }
 
-<!--task 2 started -->
+
+    <!--task 3 started -->
+    let word = "TARGET"
+
+    // <!--task 3 finished  -->
+
+
+
+
+
+// <!--task 2 started -->
     // 1, set screen keyboard  keypress event
 document.querySelector('#keyboard').addEventListener('click', function(event) {
     if (event.target.classList.contains('clickBtn')) {
@@ -52,9 +62,16 @@ document.querySelector('#keyboard').addEventListener('click', function(event) {
             button.style.backgroundColor = 'skyblue'; // Resets the background color
         }
     });
-
+          
 
     <!--task 2 ended -->
+
+
+
+
+    <!--task 4 'current guess' started -->
+
+    <!--task 4 'current guess' ended -->
 
 
 
