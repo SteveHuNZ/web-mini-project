@@ -76,9 +76,7 @@ button {
 
 /* this is the board part  */
 #board-container{
-    width: 20px; /* 盒子宽度 */
-    height: 20px; /* 盒子高度 */
-    background-color: olivedrab;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +88,7 @@ button {
 }
 #board {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     grid-gap: 5px;
     padding: 10px;
     box-sizing: border-box;
@@ -101,7 +99,7 @@ button {
     min-height: 60px;
     font-size: 50px ;
     font-weight: bold;
-    color: gainsboro;
+    color: black;
     text-transform: uppercase;
 
     display: flex;
