@@ -41,6 +41,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // a function handleSubmitWord finished
 
+
+
+
+
+
+    <!--task 4 'current guess' started -->
+// generate 30 squares
+
+    createSquares()
+    function createSquares(){
+        const gameBoard = document.getElementById("board")
+
+
+        for (let index =0;index<36; index++){
+            let square =document.createElement("div");
+            square.classList.add("square");
+            square.setAttribute("id",index + 1);
+            gameBoard.appendChild(square);
+
+        }
+    }
+
+    //  update the guessed words
+    function getCurrentWordArr(){
+        const numberOfGuessedWords = guessedWords.length
+        return guessedWords[numberOfGuessedWords-1]
+    }
+
+    function updateGuessedWords (letter){
+        const currentWordArr= getCurrentWordArr()
+        if(currentWordArr&&currentWordArr.length < 6){
+            currentWordArr.push(letter)
+            const availableSpaceEl=document.getElementById(String(availableSpace))
+            availableSpace = availableSpace + 1;
+            availableSpaceEl.textContent = letter;
+        }
+
+
+    }
+
+
+
+    <!--task 4 'current guess' ended -->
+
+
 // <!--task 2 started -->
     // 1, set screen keyboard  keypress event
 // document.querySelector('#keyboard').addEventListener('click', function(event) {
@@ -86,9 +131,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Here, add the logic for starting a new game
             } else {
                 // Print the name of the key
-                // console.log(event.key.toUpperCase());
+                console.log(event.key)
 
-                const letter = event.key.toUpperCase();
+                // const letter = event.key.toUpperCase();
+                const letter = event.key;
+
+
+
+
 
                 updateGuessedWords(letter)
             }
@@ -112,54 +162,9 @@ document.addEventListener("DOMContentLoaded", function() {
             button.style.backgroundColor = 'skyblue'; // Resets the background color
         }
     });
-          
+
 
     <!--task 2 ended -->
-
-
-
-
-    <!--task 4 'current guess' started -->
-// generate 30 squares
-
-    createSquares()
-    function createSquares(){
-        const gameBoard = document.getElementById("board")
-
-
-        for (let index =0;index<36; index++){
-            let square =document.createElement("div");
-            square.classList.add("square");
-            square.setAttribute("id",index + 1);
-            gameBoard.appendChild(square);
-
-        }
-    }
-
-    //  update the guessed words
-    function getCurrentWordArr(){
-        const numberOfGuessedWords = guessedWords.length
-        return guessedWords[numberOfGuessedWords-1]
-    }
-
-    function updateGuessedWords (letter){
-        const currentWordArr= getCurrentWordArr()
-        if(currentWordArr&&currentWordArr.length < 6){
-            currentWordArr.push(letter)
-            const availableSpaceEl=document.getElementById(String(availableSpace))
-            availableSpace = availableSpace + 1;
-            availableSpaceEl.textContent = letter;
-        }
-
-
-    }
-
-
-
-    <!--task 4 'current guess' ended -->
-
-
-
 
 
 
