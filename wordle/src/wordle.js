@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <!--task 3 started -->
     let word = "TARGET"
+    let guessedWordCount = 0;
 
     // <!--task 3 finished  -->
  // a function handleSubmitWord started
@@ -28,6 +29,33 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         // combine all the elements of the array into one continuous string without any separator,
         const currentWord = currentWordArr.join("");
+
+        const firstLetterId =guessedWordCount * 5 + 1;
+
+        const interval= 200;
+        currentWordArr.forEach((letter,index) =>{
+            setTimeout (()=>{
+                const tileColor = "rgb(58,58,60)"
+                const letterId = firstLetterId+ index;
+                const letterEl = document.getElementById (letterId);
+                letterEl.classList.add("animate_flipInX");
+                letterEl.style =`background-color:${tileColor};border-color:${tileColor}`;
+
+
+
+                },interval*index
+
+            );
+        });
+
+
+
+
+
+
+
+
+
         if(currentWord === word){
             window.alert("congratulations!");
         }X
@@ -57,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let index =0;index<36; index++){
             let square =document.createElement("div");
             square.classList.add("square");
+            square.classList.add("animate_animated");
             square.setAttribute("id",index + 1);
             gameBoard.appendChild(square);
 

@@ -16,7 +16,7 @@ body, html {
 
 }
 .title {
-    margin-top: 30px; /* 标题距离顶部的距离 */
+    margin-top: 20px; /* 标题距离顶部的距离 */
     text-align: center;
 }
 .keyboard-container {
@@ -95,9 +95,9 @@ button {
 }
 .square{
     border:2px solid rgb(178, 178, 194);
-    min-width: 60px;
-    min-height: 60px;
-    font-size: 50px ;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 30px ;
     font-weight: bold;
     color: black;
     text-transform: uppercase;
