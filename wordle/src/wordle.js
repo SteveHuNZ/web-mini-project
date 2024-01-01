@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <!--task 3 started -->
     let word = "TARGET"
-    let guessedWordCount = 0;
+ // set words api
 
     // <!--task 3 finished  -->
+
+    let guessedWordCount = 0;
     function  getTileColor(letter, index){
         const isCorrectLetter = word.includes(letter);
         if (!isCorrectLetter){
@@ -129,6 +131,19 @@ document.addEventListener("DOMContentLoaded", function() {
     <!--task 4 'current guess' ended -->
 
 
+    // handleDeleteLetter function
+    function handleDeleteLetter(){
+        const currentWordArr = getCurrentWordArr()
+        const removedLetter = currentWordArr.pop()
+        guessedWords[guessedWords.length-1] = currentWordArr
+        const lastLetterEl= document.getElementById(String(availableSpace -1))
+
+        lastLetterEl.textContent = ''
+        availableSpace = availableSpace -1;
+
+    }
+
+
 // <!--task 2 started -->
     // 1, set screen keyboard  keypress event
 // document.querySelector('#keyboard').addEventListener('click', function(event) {
@@ -150,6 +165,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 handleSubmitWord()
                 return;
             }
+
+// delete letter function
+            if(letter ==='BACKSPACE'){
+                handleDeleteLetter()
+                return;
+            }
+
+
+
+
+
             updateGuessedWords(letter)
         };
 
