@@ -21,6 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
     let guessedWordCount = 0;
 
     // <!--task 3 finished  -->
+    function  getTileColor(letter, index){
+        const isCorrectLetter = word.includes(letter);
+        if (!isCorrectLetter){
+            return "rgb(58,58,60)";
+
+        }
+        const letterInThatPosition = word.charAt(index);
+        const isCorrectPosition = (letter === letterInThatPosition);
+        if(isCorrectPosition){
+            return "reg(83,141,78)";
+        }
+        return "rgb(181,159,59)";
+
+    }
+
+
  // a function handleSubmitWord started
     function handleSubmitWord(){
         const currentWordArr = getCurrentWordArr();
@@ -35,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const interval= 200;
         currentWordArr.forEach((letter,index) =>{
             setTimeout (()=>{
-                const tileColor = "rgb(58,58,60)"
+                const tileColor = getTileColor(letter,index);
                 const letterId = firstLetterId+ index;
                 const letterEl = document.getElementById (letterId);
                 letterEl.classList.add("animate_flipInX");
@@ -160,10 +176,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Here, add the logic for starting a new game
             } else {
                 // Print the name of the key
-                console.log(event.key)
+                console.log(event.key.toUpperCase())
 
                 // const letter = event.key.toUpperCase();
-                const letter = event.key;
+                const letter = event.key.toUpperCase();
 
 
 
