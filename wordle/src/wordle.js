@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const letter = target.getAttribute("id");
 
             // console.log(key);
-            // this is to decide if the word is 5 digital, if it's not the function handlesubmitword will be applyed and the
-            // window will alert , please type  5 letter words
+            // this is to decide if the word is 6 digital, if it's not the function handlesubmitword will be applyed and the
+            // window will alert , please type 6 letter words
             if(letter ==='enter'){
                 handleSubmitWord()
                 return;
@@ -205,8 +205,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 // const letter = event.key.toUpperCase();
                 const letter = event.key.toUpperCase();
 
+                // this is to decide if the word is 6 digital, if it's not the function handlesubmitword will be applyed and the
+                // window will alert , please type 6 letter words
+                if(letter ==='Enter'){
+                    handleSubmitWord()
+                    return
+                }
 
 
+
+
+                // delete letter function
+                if(letter ==='BACKSPACE'){
+                    handleDeleteLetter()
+                    return;
+                }
 
 
                 updateGuessedWords(letter)
@@ -220,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         key.addEventListener('click', function() {
             this.classList.add('active');
-            setTimeout(() => this.classList.remove('active'), 1000); // Removes the class after a short delay
+            // setTimeout(() => this.classList.remove('active'), 1000); // Removes the class after a short delay
         });
     });
     //set 2-4 handle the click events and change the background color for mechanic keyboard
