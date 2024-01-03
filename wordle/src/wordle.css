@@ -65,6 +65,10 @@ button {
     background-color: skyblue; /* Change as needed */
 }
 
+.btn-disabled {
+    background: orangered;
+}
+
 
 /* Additional styles for responsiveness and aesthetics can be added here */
 
@@ -78,6 +82,7 @@ button {
 #board-container{
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 0.5;
@@ -86,7 +91,27 @@ button {
 
 
 }
-#board {
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: orange;
+}
+
+.grey {
+    background: grey;
+}
+
+#guess {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#history {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-gap: 5px;
