@@ -169,10 +169,10 @@ function backspaceKey() {
 
 function  escapeKey(){
 
-        // let startNewGame = confirm("Do you wish to start a new game?");
-        // if (startNewGame) {
-        //     initState(true);
-        // }
+        let startNewGame = confirm("Do you wish to start a new game?");
+        if (startNewGame) {
+            initState(true);
+        }
 
 
 }
