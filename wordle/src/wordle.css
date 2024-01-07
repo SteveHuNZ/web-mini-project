@@ -138,3 +138,18 @@ button {
 
 
 /*<!--task 4 section finished -->*/
+quare{
+    border:2px solid rgb(178, 178, 194);
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 30px ;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
